@@ -21,3 +21,5 @@ const RobotDetails = ({robot}) => {
   )
 
 }
+
+export default RobotDetails

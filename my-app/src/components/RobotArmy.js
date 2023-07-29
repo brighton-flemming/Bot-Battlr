@@ -1,13 +1,13 @@
 import React from "react";
 
-const RobotArmy = ({enlistedRobots}) => {
-    return(
-<div>
+const RobotArmy = ({ enlistedRobots }) => {
+  return (
+    <div>
       <h2> Your Robot Army</h2>
       <ul>
-        {robots.map((enlistedRobots) => (
-          <li key={enlistedRobots.id} >
-            {enlistedRobots.name} ~ {enlistedRobots.bot_class}
+        {enlistedRobots.map((robot) => (
+          <li key={robot.id}>
+            {robot.name} ~ {robot.bot_class}
           </li>
         ))}
       </ul>
@@ -15,4 +15,4 @@ const RobotArmy = ({enlistedRobots}) => {
   );
 };
 
-    export default RobotArmy
+export default RobotArmy;

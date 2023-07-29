@@ -1,18 +1,18 @@
 import React from "react";
 
-const RobotList = ({ robots, onSelectRobot}) => {
+const RobotList = ({ robots, onSelectRobot }) => {
   return (
     <div>
-     <h2>Robot Available </h2>
-     <ul>
-      {robots.map((robot) => (
-        <li key={robot.id} onClick={onSelectRobot}>
+      <h2>Robot Available </h2>
+      <ul>
+        {robots.map((robot) => (
+          <li key={robot.id} onClick={onSelectRobot}>
             {robot.name} ~ {robot.bot_class}
-        </li>
-      ))}
-     </ul>
-
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+  );
+};
 
-}
+export default RobotList;

@@ -10,19 +10,14 @@ const botTypeClasses = {
 };
 
 function RobotCard({ robot, onEnlist, onDischarge, enlisted }) {
+  const handleDischarge = (event) => {
+    event.preventDefault();
+    onDischarge(robot);
+  };
 
-    const handleDischarge = (event) => {
-        event.preventDefault();
-        onDischarge(robot);
-      };
-   
   return (
     <div className="ui column">
-      <div
-        className="ui card"
-        key={robot.id}
-
-      >
+      <div className="ui card" key={robot.id}>
         <div className="image">
           <img alt="oh no!" src={robot.avatar_url} />
         </div>
@@ -32,13 +27,15 @@ function RobotCard({ robot, onEnlist, onDischarge, enlisted }) {
             <i className={botTypeClasses[robot.bot_class]} />
           </div>
           <div className="meta text-wrap">
-           <p>Catchphrase: <small>{robot.catchphrase}</small></p>
+            <p>
+              Catchphrase: <small>{robot.catchphrase}</small>
+            </p>
           </div>
         </div>
         <div className="extra content">
           <p>
             <i className="icon heartbeat" />
-         Health: {robot.health}
+            Health: {robot.health}
           </p>
 
           <p>
@@ -54,17 +51,20 @@ function RobotCard({ robot, onEnlist, onDischarge, enlisted }) {
             Created At:{robot.created_at}
           </p>
           <p>
-            <i className="date"/>
-              Updated At:{robot.updated_at}
+            <i className="date" />
+            Updated At:{robot.updated_at}
           </p>
           <span>
             <div className="ui center aligned segment basic">
               {enlisted ? (
-                <button className="ui mini red button" onClick={handleDischarge}>
+                <button
+                  className="ui mini red button"
+                  onClick={handleDischarge}
+                >
                   DISCHARGE
                 </button>
               ) : (
-                 <button onClick={() => onEnlist(robot)}>Enlist</button>
+                <button onClick={() => onEnlist(robot)}>Enlist</button>
               )}
             </div>
           </span>

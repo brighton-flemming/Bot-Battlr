@@ -39,8 +39,8 @@ body {
   
   .ui.card .image img {
     border-radius: 10px 10px 0 0;
-    width: 200px; /* Reduce the image width */
-    height: 200px; /* Reduce the image height */
+    width: 200px; 
+    height: 200px; 
   }
   
   .ui.card .content .header {

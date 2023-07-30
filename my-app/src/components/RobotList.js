@@ -19,6 +19,7 @@ const RobotList = ({ robots, onEnlist, onSelectRobot, onDischarge }) => {
                 onClick={() => onSelectRobot(robot)}
                 onEnlist={() => onEnlist(robot)}
                 onDischarge={() => onDischarge(robot)}
+                onSelectRobot={onSelectRobot}
               />
             ))}
           </div>

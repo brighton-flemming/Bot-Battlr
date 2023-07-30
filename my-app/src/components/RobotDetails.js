@@ -1,6 +1,5 @@
-
 import React from "react";
-import RobotCard from "./RobotCard"; 
+import RobotCard from "./RobotCard";
 
 const botTypeClasses = {
   Assault: "icon military",
@@ -25,7 +24,7 @@ const RobotDetails = ({ robot, onEnlistRobot }) => {
       <div className="ui two column centered grid">
         <div className="row">
           <div className="four wide column">
-            <RobotCard robot={robot} /> 
+            <RobotCard robot={robot} />
           </div>
           <div className="four wide column">
             <h2>Name: {robot.name}</h2>
@@ -56,9 +55,11 @@ const RobotDetails = ({ robot, onEnlistRobot }) => {
                 </div>
               </div>
             </div>
-            
-       <button className="ui button fluid" onClick={handleEnlistRobot}></button>
-            
+
+            <button
+              className="ui button fluid"
+              onClick={handleEnlistRobot}
+            ></button>
           </div>
         </div>
       </div>
@@ -67,4 +68,3 @@ const RobotDetails = ({ robot, onEnlistRobot }) => {
 };
 
 export default RobotDetails;
-

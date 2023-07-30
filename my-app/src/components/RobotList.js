@@ -7,11 +7,11 @@ const RobotList = ({ robots, onEnlist, onSelectRobot, onDischarge }) => {
   }
 
   return (
-    <div>
-      <div >
-        <div>
+    <div className="ui segment ">
+      <div className="ui grid">
+        <div >
           <h2> Robots Available </h2>
-          <div className="ui cards">
+          <div className="column">
             {robots.map((robot) => (
               <RobotCard
                 key={robot.id}

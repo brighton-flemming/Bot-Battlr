@@ -10,7 +10,7 @@ body {
   }
   
   /* Header styles */
-  h2 {
+  h1,h2 {
     font-size: 36px;
     text-align: center;
     margin: 20px 0;
@@ -39,6 +39,8 @@ body {
   
   .ui.card .image img {
     border-radius: 10px 10px 0 0;
+    width: 200px; /* Reduce the image width */
+    height: 200px; /* Reduce the image height */
   }
   
   .ui.card .content .header {
@@ -86,14 +88,14 @@ body {
   }
   
   .ui.segment .ui.grid {
-    display: flex;
+    display: flex; /* Use flex to enable horizontal layout */
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* Center the elements horizontally */
   }
   
   .ui.segment .ui.grid .row {
-    width: 48%;
-    margin-bottom: 20px;
+    width: 250px; /* Set a fixed width for each robot card */
+    margin: 0 10px; /* Add margin between robot cards */
   }
   
   /* Robot Details styles */

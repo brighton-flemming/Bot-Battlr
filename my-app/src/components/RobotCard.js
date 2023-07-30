@@ -14,9 +14,9 @@ function RobotCard({ robot, onEnlist, onDischarge }) {
     event.preventDefault();
     onDischarge(robot);
   };
-
+ 
   return (
-    <div>
+    <div  className="ui column">
       <div className="ui card" key={robot.id}>
         <div className="image">
           <img alt="oh no!" src={robot.avatar_url} />

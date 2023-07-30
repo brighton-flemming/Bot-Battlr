@@ -21,7 +21,7 @@ const RobotDetails = ({ robot, onEnlistRobot }) => {
 
   return (
     <div className="ui segment">
-      <div className="ui two column centered grid">
+      <div className="ui  grid">
         <div className="row">
           <div className="four wide column">
             <RobotCard robot={robot} />

@@ -36,19 +36,19 @@ function RobotCard({ robot, onEnlist, onDischarge }) {
           </div>
         </div>
         <div className="extra content">
-          <span>
+          <p>
             <i className="icon heartbeat" />
-            {robot.health}
-          </span>
+          {robot.health}
+          </p>
 
-          <span>
+          <p>
             <i className="icon lightning" />
             {robot.damage}
-          </span>
-          <span>
+          </p>
+          <p>
             <i className="icon shield" />
             {robot.armor}
-          </span>
+          </p>
           <span>
             <div className="ui center aligned segment basic">
               <button

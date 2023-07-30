@@ -2,23 +2,22 @@ import React, { useEffect, useState } from "react";
 import RobotDetails from "./components/RobotDetails";
 import RobotArmy from "./components/RobotArmy";
 import RobotList from "./components/RobotList";
+import RobotPage from "./components/RobotPage"
 import "./App.css";
-
-
-
 
 const App = () => {
   const [selectedRobot, setSelectedRobot] = useState(null);
   const [enlistedRobots, setEnlistedRobots] = useState([]);
   const [armyBots, setArmyBots] = useState([]);
+  const [robots, setRobots] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/robots")
-    .then((response) => response.json())
-    .then((data) => {
-        setArmyBots(data)
-    })
-    .catch((error) => console.log(error))
+      .then((response) => response.json())
+      .then((data) => {
+        setRobots(data); 
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   const handleSelectRobot = (robot) => {
@@ -29,22 +28,19 @@ const App = () => {
     if (!armyBots.some((armyBot) => armyBot.id === bot.id)) {
       setArmyBots([...armyBots, bot]);
 
-      fetch(" http://localhost:3000/robots" , {
+      fetch("http://localhost:3000/robots", {
         method: "POST",
         headers: {
-            "Content-Type":"application/json",
+          "Content-Type": "application/json",
         },
-        body:JSON.stringify(bot),
+        body: JSON.stringify(bot),
       })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Received data from the server:", data);
-      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Received data from the server:", data);
+        });
     }
   };
-
-
-
 
   const handleRelease = (bot) => {
     fetch(`http://localhost:3000/robots/${bot.id}`, {
@@ -56,7 +52,6 @@ const App = () => {
       })
       .catch((error) => console.log(error));
   };
-  
 
   const handleDischarge = (bot) => {
     fetch(`http://localhost:3000/robots/${bot.id}`, {
@@ -78,15 +73,16 @@ const App = () => {
   return (
     <div>
       <h1>Bot Battlr</h1>
+      <RobotPage />
       <RobotList
+        robots={robots} 
         onEnlist={handleEnlist}
         onSelectRobot={handleSelectRobot}
       />
-      <RobotDetails
-        robot={selectedRobot}
-        onEnlistRobot={handleEnlistRobot}
-      />
+      <RobotDetails robot={selectedRobot} onEnlistRobot={handleEnlistRobot} />
+      
       <RobotArmy
+        robots={robots} 
         armyBots={armyBots}
         onDischarge={handleDischarge}
         onRelease={handleRelease}

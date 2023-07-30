@@ -1,0 +1,103 @@
+/* styles.css */
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header styles */
+  h2 {
+    font-size: 36px;
+    text-align: center;
+    margin: 20px 0;
+    color: #33cc33;
+  }
+  
+  /* Robot Army styles */
+  .bot-army {
+    padding: 20px;
+  }
+  
+  .bot-army-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Robot Card styles */
+  .ui.card {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+  }
+  
+  .ui.card .image img {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .ui.card .content .header {
+    font-size: 24px;
+    color: #33cc33;
+  }
+  
+  .ui.card .content .meta {
+    color: #c0c0c0;
+    font-size: 14px;
+  }
+  
+  .ui.card .content .meta small {
+    color: #ffffff;
+  }
+  
+  .ui.card .extra.content {
+    font-size: 14px;
+  }
+  
+  .ui.card .extra.content p {
+    margin: 5px 0;
+  }
+  
+  .ui.card button {
+    margin-top: 10px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+  
+  .ui.card button:hover {
+    background-color: #e60000;
+  }
+  
+  /* Robot List styles */
+  .ui.segment {
+    background-color: #2d2d2d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .ui.segment .ui.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .ui.segment .ui.grid .row {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  
+  /* Robot Details styles */
+  .ui.two.column.centered.grid {
+    margin-top: 20px;
+  }
+  

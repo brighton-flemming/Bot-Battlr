@@ -2,9 +2,9 @@ import React from "react";
 
 const RobotArmy = ({ armyBots, onRelease }) => {
   return (
-    <div className="ui segment inverted olive bot-army">
-      <div className="ui five column grid">
-        <div className="row bot-army-row">
+    <div>
+      <div >
+        <div >
           <h2> Your Robot Army</h2>
           <ul>
             {armyBots.map((robot) => (
@@ -14,7 +14,8 @@ const RobotArmy = ({ armyBots, onRelease }) => {
                   alt={robot.name}
                   style={{ width: "200px", height: "200px" }}
                 />
-                {robot.name} ~ {robot.bot_class}
+                <p>Name:{robot.name} </p>
+                <p>Bot Class:{robot.bot_class}</p>
                 <button onClick={() => onRelease(robot)}>Release</button>
               </li>
             ))}

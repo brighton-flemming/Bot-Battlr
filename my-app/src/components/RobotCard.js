@@ -16,7 +16,7 @@ function RobotCard({ robot, onEnlist, onDischarge }) {
   };
 
   return (
-    <div className="ui column">
+    <div>
       <div className="ui card" key={robot.id}>
         <div className="image">
           <img alt="oh no!" src={robot.avatar_url} />
@@ -56,13 +56,13 @@ function RobotCard({ robot, onEnlist, onDischarge }) {
           </p>
           <span>
             <div className="ui center aligned segment basic">
-              <button
+             <p> <button
                 className="ui mini red button"
                 onClick={() => handleDischarge(robot)}
               >
                 DISCHARGE
-              </button>
-              <button onClick={() => onEnlist(robot)}>Enlist</button>
+              </button></p>
+              <p><button onClick={() => onEnlist(robot)}>Enlist</button></p>
             </div>
           </span>
         </div>

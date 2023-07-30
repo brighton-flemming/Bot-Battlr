@@ -589,18 +589,6 @@
       "updated_at": "2018-10-02T19:55:12.006Z"
     },
     {
-      "id": 167,
-      "name": "S-96",
-      "health": 84,
-      "damage": 29,
-      "armor": 77,
-      "bot_class": "Support",
-      "catchphrase": "0101001000001101000110010001011010000001100",
-      "avatar_url": "https://robohash.org/aperiamautemconsectetur.png?size=300x300&set=set1",
-      "created_at": "2018-10-02T19:55:12.017Z",
-      "updated_at": "2018-10-02T19:55:12.017Z"
-    },
-    {
       "id": 168,
       "name": "Ar-02",
       "health": 76,
@@ -695,30 +683,6 @@
       "avatar_url": "https://robohash.org/quoassumendadolorem.png?size=300x300&set=set1",
       "created_at": "2018-10-02T19:55:12.190Z",
       "updated_at": "2018-10-02T19:55:12.190Z"
-    },
-    {
-      "id": 179,
-      "name": "qX-29",
-      "health": 49,
-      "damage": 88,
-      "armor": 30,
-      "bot_class": "Assault",
-      "catchphrase": "000000001000011111101101011101101010111011000110",
-      "avatar_url": "https://robohash.org/quolaborumnisi.png?size=300x300&set=set1",
-      "created_at": "2018-10-02T19:55:12.207Z",
-      "updated_at": "2018-10-02T19:55:12.207Z"
-    },
-    {
-      "id": 180,
-      "name": "\\-94",
-      "health": 75,
-      "damage": 40,
-      "armor": 99,
-      "bot_class": "Defender",
-      "catchphrase": "010001011110101110011011101001010100010010111110",
-      "avatar_url": "https://robohash.org/invelitmaiores.png?size=300x300&set=set1",
-      "created_at": "2018-10-02T19:55:12.230Z",
-      "updated_at": "2018-10-02T19:55:12.230Z"
     }
   ]
 }

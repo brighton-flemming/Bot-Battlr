@@ -7,9 +7,9 @@ const RobotList = ({ robots, onEnlist, onSelectRobot, onDischarge }) => {
   }
 
   return (
-    <div className="ui segment inverted olive bot-army">
-      <div className="ui five column grid">
-        <div className="row bot-army-row">
+    <div>
+      <div >
+        <div>
           <h2> Robots Available </h2>
           <div className="ui cards">
             {robots.map((robot) => (

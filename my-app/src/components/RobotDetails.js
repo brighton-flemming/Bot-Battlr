@@ -38,8 +38,8 @@ const RobotDetails = ({ robot, onEnlistRobot }) => {
             </strong>
             <br />
             <div className="ui segment">
-              <div className="ui three column centered grid">
-                <div className="row">
+              <div >
+                <div >
                   <div className="column">
                     <i className="icon large circular red heartbeat" />
                     <strong>{robot.health}</strong>

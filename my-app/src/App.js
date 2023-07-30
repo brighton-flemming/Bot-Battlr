@@ -27,8 +27,9 @@ const App = () => {
   };
 
   const handleDischarge = (bot) => {
-    fetch("http://localhost:3000/robots");
-    method: "DELETE"
+    fetch(`http://localhost:3000/robots/${bot.id}` , {
+    method: "DELETE",
+  })
       .then((response) => response.json())
       .then(() => {
         setArmyBots(armyBots.filter((armyBot) => armyBot.id !== bot.id));

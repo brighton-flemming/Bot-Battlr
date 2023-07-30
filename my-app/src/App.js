@@ -53,16 +53,21 @@ const App = () => {
   };
 
   const handleDischarge = (bot) => {
-    fetch(`http://localhost:3000/robots/${bot.id}`, {
-      method: "DELETE",
-    })
-      .then((response) => response.json())
-      .then(() => {
-        setEnlistedRobots(enlistedRobots.filter((enlistedBot) => enlistedBot.id !== bot.id));
-        setArmyBots(armyBots.filter((armyBot) => armyBot.id !== bot.id));
+    if (!armyBots.some((armyBot) => armyBot.id === bot.id)) {
+       setEnlistedRobots(enlistedRobots.filter((enlistedBot) => enlistedBot.id !== bot.id));
+       setArmyBots(armyBots.filter((armyBot) => armyBot.id !== bot.id));
+
+      fetch("http://localhost:3000/robots", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(bot),
       })
-      .catch((error) => console.log(error));
-  };
+        
+    }
+  }
+
 
   const handleEnlistRobot = () => {
     if (selectedRobot && !enlistedRobots.includes(selectedRobot)) {

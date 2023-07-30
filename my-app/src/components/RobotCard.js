@@ -10,6 +10,11 @@ const botTypeClasses = {
 };
 
 function RobotCard({ robot, onEnlist, onDischarge }) {
+
+    const handleDischarge = (event) => {
+        event.preventDefault();
+        onDischarge(robot);
+      };
    
   return (
     <div className="ui column">
@@ -48,8 +53,7 @@ function RobotCard({ robot, onEnlist, onDischarge }) {
             <div className="ui center aligned segment basic">
               <button
                 className="ui mini red button"
-                onClick={() =>
-                  onDischarge(robot)
+                onClick={handleDischarge
                 }
               >
                 DISCHARGE

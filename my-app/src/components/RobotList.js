@@ -1,6 +1,6 @@
 import React from "react";
 
-const RobotList = ({ robots, onSelectRobot }) => {
+const RobotList = ({ robots, onEnlist, onSelectRobot }) => {
   return (
     <div>
       <h2> Robots Available </h2>

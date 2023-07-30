@@ -13,8 +13,8 @@ const RobotList = ({ robots, onEnlist, onSelectRobot, onDischarge }) => {
       <h2> Robots Available </h2>
       <div className="ui cards">
       {robots.map((robot)=> (
-        <RobotCard key={robot.id} robot={robot}  onClick={() => onSelectRobot(robot)}
-        onEnlist={() => onEnlist(robot)} onDischarge={onDischarge}/>
+        <RobotCard key={robot.id} robot={robot} onClick={() => onSelectRobot(robot)}
+        onEnlist={() => onEnlist(robot)}  onDischarge={() => onDischarge(robot)}/>
       ))}
      </div>
     </div>

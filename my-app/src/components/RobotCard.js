@@ -9,7 +9,7 @@ const botTypeClasses = {
   Captain: "icon star",
 };
 
-function RobotCard({ robot, onEnlist, onDischarge }) {
+function RobotCard({ robot, onEnlist, onDischarge, enlisted }) {
 
     const handleDischarge = (event) => {
         event.preventDefault();
@@ -59,14 +59,13 @@ function RobotCard({ robot, onEnlist, onDischarge }) {
           </p>
           <span>
             <div className="ui center aligned segment basic">
-              <button
-                className="ui mini red button"
-                onClick={handleDischarge
-                }
-              >
-                DISCHARGE
-              </button>
-              <button onClick={() => onEnlist(robot)}>Enlist</button> 
+              {enlisted ? (
+                <button className="ui mini red button" onClick={handleDischarge}>
+                  DISCHARGE
+                </button>
+              ) : (
+                 <button onClick={() => onEnlist(robot)}>Enlist</button>
+              )}
             </div>
           </span>
         </div>

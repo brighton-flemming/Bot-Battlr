@@ -16,12 +16,16 @@ const RobotDetails = ({ robot, onEnlistRobot }) => {
     return <div>No Robots Selected</div>;
   }
 
+  const handleEnlistRobot = () => {
+    onEnlistRobot(robot);
+  };
+
   return (
     <div className="ui segment">
       <div className="ui two column centered grid">
         <div className="row">
           <div className="four wide column">
-            <RobotCard bot={robot} /> 
+            <RobotCard robot={robot} /> 
           </div>
           <div className="four wide column">
             <h2>Name: {robot.name}</h2>
@@ -52,12 +56,13 @@ const RobotDetails = ({ robot, onEnlistRobot }) => {
                 </div>
               </div>
             </div>
-            <button
+            {/* <button
               className="ui button fluid"
               onClick={() => console.log("connect this to a function that shows all bots")}
             >
               Go Back
-            </button>
+            </button> */}
+       <button className="ui button fluid" onClick={handleEnlistRobot}></button>
             
           </div>
         </div>

@@ -3,6 +3,7 @@ import RobotDetails from "./components/RobotDetails";
 import RobotArmy from "./components/RobotArmy";
 import RobotList from "./components/RobotList";
 
+
 import "./App.css";
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
   const handleEnlist = (bot) => {
     if (!armyBots.some((armyBot) => armyBot.id === bot.id)) {
       setArmyBots([...armyBots, bot]);
+      setEnlistedRobots([...enlistedRobots, bot]);
 
       fetch("http://localhost:3000/robots", {
         method: "POST",
@@ -35,10 +37,7 @@ const App = () => {
         },
         body: JSON.stringify(bot),
       })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Received data from the server:", data);
-        });
+        
     }
   };
 
@@ -59,6 +58,7 @@ const App = () => {
     })
       .then((response) => response.json())
       .then(() => {
+        setEnlistedRobots(enlistedRobots.filter((enlistedBot) => enlistedBot.id !== bot.id));
         setArmyBots(armyBots.filter((armyBot) => armyBot.id !== bot.id));
       })
       .catch((error) => console.log(error));
@@ -94,3 +94,5 @@ const App = () => {
 };
 
 export default App;
+
+

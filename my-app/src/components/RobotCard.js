@@ -1,7 +1,3 @@
-
-
-
-
 import React from "react";
 
 const botTypeClasses = {
@@ -14,10 +10,10 @@ const botTypeClasses = {
 };
 
 function RobotCard({ robot, onEnlist, onDischarge }) {
-//   const handleDischarge = (event) => {
-//     event.preventDefault();
-//     onDischarge(robot);
-//   };
+  const handleDischarge = (event) => {
+    event.preventDefault();
+    onDischarge(robot);
+  };
 
   return (
     <div className="ui column">
@@ -31,7 +27,9 @@ function RobotCard({ robot, onEnlist, onDischarge }) {
             <i className={botTypeClasses[robot.bot_class]} />
           </div>
           <div className="meta text-wrap">
-            <p>Catchphrase: <small>{robot.catchphrase}</small></p>
+            <p>
+              Catchphrase: <small>{robot.catchphrase}</small>
+            </p>
           </div>
         </div>
         <div className="extra content">
@@ -58,7 +56,10 @@ function RobotCard({ robot, onEnlist, onDischarge }) {
           </p>
           <span>
             <div className="ui center aligned segment basic">
-              <button className="ui mini red button" onClick={() => onDischarge(robot)}>
+              <button
+                className="ui mini red button"
+                onClick={() => handleDischarge(robot)}
+              >
                 DISCHARGE
               </button>
               <button onClick={() => onEnlist(robot)}>Enlist</button>

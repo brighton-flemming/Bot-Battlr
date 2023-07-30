@@ -38,39 +38,28 @@ View Robot Details
 ~ To discharge a robot from your army, click the "DISCHARGE" button on the enlisted robot card.
 ~ The robot will be removed  permanently from your army as well as the Robot List.
 
-Clicking on a robot card (either enlisted or available) will display detailed information about the robot.
+5. Display of robot details
+The robot's card displays the following details;
 The robot's name, catchphrase, class, health, damage, and armor stats will be shown.
 # Technologies Used
-React: A JavaScript library for building user interfaces.
-JavaScript: The primary programming language used.
-HTML: Markup language for creating the web pages.
-CSS: Stylesheet language for styling the web pages.
-Semantic UI: CSS framework for a visually appealing design.
-Fetch API: Used to perform HTTP requests to the backend server.
+1. React: A JavaScript library for building user interfaces.
+2. JavaScript: The primary programming language used.
+3. HTML: Markup language for creating the web pages.
+4. CSS: Stylesheet language for styling the web pages.
+5. Semantic UI: CSS framework for a visually appealing design.
+6. Fetch API: Used to perform HTTP requests to the backend server.
 # Usage
 # Landing Page
 
-Upon opening the application, you will see a visually appealing landing page with the title "Bot Battlr" and a header "Robot List".
-The robot list displays available robots in card format.
-Enlisting Robots
+~ Upon opening the application, you will see a visually appealing landing page with the title "Bot Battlr" and a header "Robot List".
+~ The robot list displays available robots in card format.
 
-To enlist a robot, click the "Enlist" button on the robot card.
-The enlisted robot will be added to your army, and the button will change to a "DISCHARGE" button.
-Enlist multiple robots to build your robot army.
-Releasing Robots
-
-To release a robot from your army, click the "DISCHARGE" button on the enlisted robot card.
-The robot will be removed from your army, and the button will revert to "Enlist".
-Viewing Robot Details
-
-Clicking on a robot card (either enlisted or available) will display detailed information about the robot.
-Information includes the robot's name, catchphrase, class, health, damage, and armor stats.
 # Contributing
 Contributions are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
 
-Fork the repository.
-Create a new branch for your changes.
-Make your changes and commit them.
-Push the changes to your forked repository.
-Submit a pull request.
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make your changes and commit them.
+4. Push the changes to your forked repository.
+5. Submit a pull request.
 

@@ -32,7 +32,7 @@ function RobotCard({ robot, onEnlist, onDischarge }) {
             <i className={botTypeClasses[robot.bot_class]} />
           </div>
           <div className="meta text-wrap">
-            <small>{robot.catchphrase}</small>
+           <p>Catchphrase: <small>{robot.catchphrase}</small></p>
           </div>
         </div>
         <div className="extra content">

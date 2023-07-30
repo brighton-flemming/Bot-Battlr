@@ -6,9 +6,9 @@ const RobotList = ({ robots, onEnlist, onSelectRobot }) => {
       <h2> Robots Available </h2>
       <ul>
         {robots.map((robot) => (
-          <li key={robot.id} onClick={onSelectRobot}>
+          <li key={robot.id} onClick={() => onSelectRobot(robot)}>
             {robot.name} ~ {robot.bot_class}
-            <button onClick={() => onSelectRobot(robot)}>Enlist</button>
+            <button onClick={() => onEnlist(robot)}>Enlist</button>
           </li>
         ))}
       </ul>

@@ -14,7 +14,7 @@ const App = () => {
 
   useEffect(() => {
     fetch("http://localhost:3000/robots")
-    .then((response) => response,json())
+    .then((response) => response.json())
     .then((data) => {
         setArmyBots(data)
     })
@@ -79,13 +79,11 @@ const App = () => {
     <div>
       <h1>Bot Battlr</h1>
       <RobotList
-        robots={robots}
         onEnlist={handleEnlist}
         onSelectRobot={handleSelectRobot}
       />
       <RobotDetails
         robot={selectedRobot}
-        robots={robots}
         onEnlistRobot={handleEnlistRobot}
       />
       <RobotArmy

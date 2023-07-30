@@ -28,7 +28,7 @@ function RobotCard({ robot, onEnlist, onDischarge }) {
         </div>
         <div className="content">
           <div className="header">
-            {robot.name}
+            Name : {robot.name}
             <i className={botTypeClasses[robot.bot_class]} />
           </div>
           <div className="meta text-wrap">
@@ -38,16 +38,24 @@ function RobotCard({ robot, onEnlist, onDischarge }) {
         <div className="extra content">
           <p>
             <i className="icon heartbeat" />
-          {robot.health}
+         Health: {robot.health}
           </p>
 
           <p>
             <i className="icon lightning" />
-            {robot.damage}
+            Damage: {robot.damage}
           </p>
           <p>
             <i className="icon shield" />
-            {robot.armor}
+            Armor: {robot.armor}
+          </p>
+          <p>
+            <i className="date" />
+            Created At:{robot.created_at}
+          </p>
+          <p>
+            <i className="date"/>
+              Updated At:{robot.updated_at}
           </p>
           <span>
             <div className="ui center aligned segment basic">

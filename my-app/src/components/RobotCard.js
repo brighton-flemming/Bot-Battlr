@@ -9,50 +9,52 @@ const botTypeClasses = {
   Captain: "icon star",
 };
 
-function RobotCard({ bot }) {
+function RobotCard({ robot, onEnlist, onDischarge }) {
+   
   return (
     <div className="ui column">
       <div
         className="ui card"
-        key={bot.id}
-        onClick={() => console.log("add code to connect event listener")}
+        key={robot.id}
+
       >
         <div className="image">
-          <img alt="oh no!" src={bot.avatar_url} />
+          <img alt="oh no!" src={robot.avatar_url} />
         </div>
         <div className="content">
           <div className="header">
-            {bot.name}
-            <i className={botTypeClasses[bot.bot_class]} />
+            {robot.name}
+            <i className={botTypeClasses[robot.bot_class]} />
           </div>
           <div className="meta text-wrap">
-            <small>{bot.catchphrase}</small>
+            <small>{robot.catchphrase}</small>
           </div>
         </div>
         <div className="extra content">
           <span>
             <i className="icon heartbeat" />
-            {bot.health}
+            {robot.health}
           </span>
 
           <span>
             <i className="icon lightning" />
-            {bot.damage}
+            {robot.damage}
           </span>
           <span>
             <i className="icon shield" />
-            {bot.armor}
+            {robot.armor}
           </span>
           <span>
             <div className="ui center aligned segment basic">
               <button
                 className="ui mini red button"
                 onClick={() =>
-                  console.log("add code to connect event listener")
+                  onDischarge(robot)
                 }
               >
-                X
+                DISCHARGE
               </button>
+              <button onClick={() => onEnlist(robot)}>Enlist</button> 
             </div>
           </span>
         </div>

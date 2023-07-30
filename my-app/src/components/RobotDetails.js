@@ -58,12 +58,7 @@ const RobotDetails = ({ robot, onEnlistRobot }) => {
             >
               Go Back
             </button>
-            <button
-              className="ui button fluid"
-              onClick={onEnlistRobot} 
-            >
-              Enlist
-            </button>
+            
           </div>
         </div>
       </div>

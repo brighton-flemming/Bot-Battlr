@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import RobotDetails from "./components/RobotDetails";
 import RobotArmy from "./components/RobotArmy";
 import RobotList from "./components/RobotList";
-import RobotPage from "./components/RobotPage"
+
 import "./App.css";
 
 const App = () => {
@@ -73,10 +73,11 @@ const App = () => {
   return (
     <div>
       <h1>Bot Battlr</h1>
-      <RobotPage />
+     
       <RobotList
         robots={robots} 
         onEnlist={handleEnlist}
+        onDischarge={handleDischarge}
         onSelectRobot={handleSelectRobot}
       />
       <RobotDetails robot={selectedRobot} onEnlistRobot={handleEnlistRobot} />

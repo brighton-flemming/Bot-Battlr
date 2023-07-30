@@ -11,7 +11,7 @@ const RobotArmy = ({ armyBots, onRelease, onDischarge, enlistedRobots }) => {
             {!enlistedRobots.includes(robot) ? (
             <button onClick={() => onRelease(robot)}>Release</button>
             ) : (
-            <button onClick={() => onDischarge(robot)}>Discharge</button>
+            <button onClick={() => onDischarge(robot)}>X</button>
         )}
             </li>
         ))}

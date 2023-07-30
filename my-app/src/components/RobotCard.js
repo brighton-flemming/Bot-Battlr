@@ -51,7 +51,7 @@ function RobotCard({ bot }) {
                   console.log("add code to connect event listener")
                 }
               >
-                x
+                X
               </button>
             </div>
           </span>
